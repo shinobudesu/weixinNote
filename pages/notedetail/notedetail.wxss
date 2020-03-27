@@ -1,0 +1,102 @@
+/* pages/notedetail/notedetail.wxss */
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 40rpx;
+  box-sizing: border-box;
+  padding-bottom: 0;
+  transition: all 0.2s linear;
+}
+
+.editor {
+  position: relative;
+  margin-top: 40rpx;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skin {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.skinScroll {
+  height: 70px;
+  padding: 20rpx;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.scrollXitem {
+  dislay:inline-block;
+  width: 60px;
+  height: 50px;
+  margin: 0 10rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+
+.total {
+  position: sticky;
+  top: 0;
+  color: #8d9296;
+  font-size: 20rpx;
+}
+.saveIcon{
+  position: absolute;
+  right: 0;
+  top: -15rpx;
+}
+.imgIcon{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 80rpx;
+  top: -15rpx;
+}
+.style1 {
+  color: rgb(235, 215, 150);
+  background: #f3edd7;
+}
+
+.style2 {
+  color: rgb(236, 140, 153);
+  background: #e4d2d2;
+}
+
+.style3 {
+  color: rgb(156, 240, 199);
+  background: #bdd4ca;
+}
+
+.style4 {
+  color: rgb(143, 197, 238);
+  background: #d4e0e9;
+}
+
+.style5 {
+  color: rgb(182, 151, 238);
+  background: #dbd4e9;
+}
+
+.style6 {
+  color: rgb(231, 142, 216);
+  background: #e7dae5;
+}

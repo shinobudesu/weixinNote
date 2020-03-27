@@ -1,0 +1,22 @@
+<!--pages/notedetail/notedetail.wxml-->
+<view class="{{activeSkin?'container style'+activeSkin:'container'}}">
+  <view class='total'>
+    <text>3月25日 下午4:19</text>
+    <image class='imgIcon' bindtap='uploadImg' src='{{imgUrl}}'></image>
+    <icon class='saveIcon' color="{{activeSave?'#fff':'#ccc'}}" type="success_no_circle" size="30" bindtap='bindtapActiveSave'/>
+    <text style='margin-left:20rpx;padding-left:20rpx;border-left:1px solid #ccc'>{{fontNumber}}字</text>
+  </view>
+  <view class='editor'>
+    <scroll-view scroll-y="true" style="height: {{sHeight}}px;">
+        <textarea bindblur="bindTextAreaBlur" bindfocus='bindTextAreaFocus' value="{{article_content}}" show-confirm-bar='{{true}}' adjust-position='{{false}}' style="min-height:{{sHeight}}px;width:100%" maxlength='-1' placeholder="..." />
+    </scroll-view>
+  </view>
+  <view class='skin'>
+    <scroll-view scroll-x="true" class='skinScroll' enable-flex='true'>
+        <view class="{{'scrollXitem style'+(index+1)}}" wx:for="{{6}}" wx:key="{{index}}" bindtap='bindtapActive' data-index='{{(index+1)}}'>
+        <icon wx:if="{{activeSkin==(index+1)}}" type="success_no_circle" size="30" color="#fff"/> 
+        </view>
+    </scroll-view>
+  </view>
+</view>
+

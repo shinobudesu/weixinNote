@@ -1,0 +1,134 @@
+/**index.wxss**/
+
+.container {
+  position: relative;
+  min-height: 100vh;
+  background: #e4f5eb;
+}
+
+.searchBox {
+  position: sticky;
+  top: 0rpx;
+  padding: 20rpx;
+  background: #91c3a6;
+  box-shadow: 0 0 5px #91c3a6;
+  z-index: 1000;
+  height: 80rpx;
+  overflow: hidden;
+}
+.searchIcon{
+  position: absolute;
+  left: 35rpx;
+  top: 38rpx;
+}
+.nickName{
+   position: absolute;
+  right: 35rpx;
+  top: 35rpx;
+  color: #fff;
+}
+.searchInput {
+  background: #e4f5eb;
+  height: 80rpx;
+  line-height: 80rpx;
+  border-radius: 24rpx;
+  padding-left: 35rpx;
+  transition: all 0.5s;
+}
+.contentBox {
+  position: relative;
+  z-index: 100;
+  display: flex;
+  background: #e4f5eb;
+}
+.contentAdd{
+  position: fixed;
+  z-index: 1000;
+  bottom: 40rpx;
+  right: 40rpx;
+}
+.cardBox {
+  width: calc(50% - 20px);
+  margin: 10px;
+}
+
+.cardContent {
+  border-radius: 20rpx;
+  overflow: hidden;
+  margin: 20rpx 0;
+  box-shadow: 0 0 10rpx #ccc;
+  transition: all 0.2s;
+}
+.cardContent:hover{
+  box-shadow: 0 0 20rpx #000;
+}
+.style1 {
+  color: #eedca1;
+}
+
+.style2 {
+  color: #f194a0;
+}
+
+.style3 {
+  color: #99e9c2;
+}
+
+.style4 {
+  color: #98caf0;
+}
+
+.style5 {
+  color: #b497eb;
+}
+
+.style6 {
+  color: #f1a7e5;
+}
+.noteContent {
+  position: relative;
+  padding: 30rpx;
+  border-bottom-right-radius: 24rpx;
+  border-bottom-left-radius: 24rpx;
+  margin-top: -1rpx;
+  z-index: 101;
+  background: #fff;
+  
+}
+
+.noteContentTop {
+  margin-top: 0;
+  border-top-right-radius: 24rpx;
+  border-top-left-radius: 24rpx;
+}
+
+.noteImg {
+  position: relative;
+  width: 100%;
+  display: block;
+  overflow: hidden;
+  z-index: 102;
+  
+}
+
+.noteTitle, .noteTime, .noteType {
+  display: block;
+  padding: 5rpx;
+}
+
+.noteTitle, .noteType {
+  font-size: 28rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noteTime {
+  font-size: 24rpx;
+}
+
+.addNote{
+  transform: rotate(45deg);
+  background: #fff;
+  border-radius: 50%;
+}
