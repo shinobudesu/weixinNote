@@ -13,6 +13,7 @@
         <view class="{{item.type=='图片便签' ? 'noteContent' : 'noteContentTop noteContent'}}">
           <text class='noteTitle'>{{item.title}}</text>
           <text class='noteTime'>{{item.time}}</text>
+          <text class='noteAuthor'>by.{{item.name}}</text>
         </view>
       </view>
     </block>
@@ -24,6 +25,7 @@
         <view class="{{item.type=='图片便签' ? 'noteContent' : 'noteContentTop noteContent'}}">
           <text class='noteTitle'>{{item.title}}</text>
           <text class='noteTime'>{{item.time}}</text>
+          <text class='noteAuthor'>by.{{item.name}}</text>
         </view>
       </view>
     </block>

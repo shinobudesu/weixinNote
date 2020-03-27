@@ -14,11 +14,12 @@ Page({
   //生命周期回调—监听页面加载
   onLoad: function() {
     console.log(app.globalData.userInfo);
-    this.setData({ nickName: app.globalData.userInfo.nickName})
+    
   },
   //生命周期回调—监听页面初次渲染完成
   onReady: function() {
     console.log('页面渲染完成');
+    this.setData({ nickName: app.globalData.userInfo.nickName })
   },
   // 生命周期回调—监听页面显示
   onShow: function() {
@@ -29,70 +30,80 @@ Page({
         title: '成熟。是一种习惯啊信息..',
         id: 1,
         type: '图片便签',
-        style: 1
+        style: 1,
+        name:'Shinobu~'
       }, {
           url: "https://fuss10.elemecdn.com/e/5d/4a731a90594a4af544c0c25941171jpeg.jpeg",
           time: "2020-03-26 15:05:05",
           title: '生活一般是回忆一半..',
           id: 2,
           type: '图片便签',
-          style: 2
+          style: 2,
+          name: 'Shinobu~'
         }, {
           url: "https://cube.elemecdn.com/0/88/03b0d39583f48206768a7534e55bcpng.png",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 3,
           type: '图片便签',
-          style: 4
+          style: 4,
+          name: 'Shinobu~'
         }, {
           url: "https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 4,
           type: '图片便签',
-          style: 1
+          style: 1,
+          name: 'Shinobu~'
         }, {
           url: "https://fuss10.elemecdn.com/a/3f/3302e58f9a181d2509f3dc0fa68b0jpeg.jpeg",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 5,
           type: '图片便签',
-          style: 2
+          style: 2,
+          name: 'Shinobu~'
         }, {
           url: "https://fuss10.elemecdn.com/1/34/19aa98b1fcb2781c4fba33d850549jpeg.jpeg",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 6,
           type: '图片便签',
-          style: 3
+          style: 3,
+          name: 'Shinobu~'
         }, {
           url: "https://fuss10.elemecdn.com/0/6f/e35ff375812e6b0020b6b4e8f9583jpeg.jpeg",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 7,
           type: '图片便签',
-          style: 1
+          style: 1,
+          name: 'Shinobu~'
         }, {
           url: "https://fuss10.elemecdn.com/9/bb/e27858e973f5d7d3904835f46abbdjpeg.jpeg",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 8,
           type: '图片便签',
-          style: 6
+          style: 6,
+          name: 'Shinobu~'
         }, {
           url: "https://fuss10.elemecdn.com/d/e6/c4d93a3805b3ce3f323f7974e6f78jpeg.jpeg",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 9,
           type: '图片便签',
-          style: 5
+          style: 5,
+          name: 'Shinobu~'
         }, {
           url: "",
           time: "2020-03-26 15:05:05",
           title: '成熟。是一种..',
           id: 10,
           type: '文字便签',
-          style: 1
+          style: 1,
+          name: 'Shinobu~'
         }]})
   },
   // 生命周期回调—监听页面隐藏

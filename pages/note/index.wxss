@@ -126,7 +126,9 @@
 .noteTime {
   font-size: 24rpx;
 }
-
+.noteAuthor{
+  font-size: 20rpx;
+}
 .addNote{
   transform: rotate(45deg);
   background: #fff;

@@ -1,3 +1,4 @@
+const util = require("../../utils/util.js");
 // pages/notedetail/notedetail.js
 Page({
 
@@ -29,6 +30,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    console.log(util.formatTime(new Date()));
     console.log(options);
     this.setData({ styleid: options.styleid, id: options.id, activeSkin: options.styleid,});
     this.computedFont();

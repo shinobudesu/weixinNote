@@ -1,13 +1,30 @@
 const formatTime = date => {
+  console.log(date);
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
   const hour = date.getHours()
   const minute = date.getMinutes()
   const second = date.getSeconds()
-
-  // return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
-  return [year, month, day].map(formatNumber).join('/')
+  let r = '';
+  switch (true) {
+    case hour > 0 && hour < 8:
+      r = '凌晨';
+      break;
+    case hour >= 8 && hour < 12:
+      r = '上午';
+      break;
+    case hour >= 12 && hour < 18:
+      r = '下午';
+      break;
+    case hour >= 18 && hour < 24:
+      r = '傍晚';
+      break;
+    default:
+      break;
+  }
+  
+  return `${month}月${day}日 ${r}${hour}:${minute} ${year}`
 }
 
 const formatNumber = n => {
