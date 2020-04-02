@@ -5,17 +5,13 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#91c3a6",
-    "navigationBarTitleText": "每日一签",
+    "navigationBarBackgroundColor": "#a5cbdd",
+    "navigationBarTitleText": "米签",
     "navigationBarTextStyle": "white",
-    "backgroundColor": "#e4f5eb",
+    "backgroundColor": "#a5cbdd",
     "enablePullDownRefresh": true
   },
-  "permission": {
-    "scope.userLocation": {
-      "desc": "你的位置信息将用于小程序位置接口的效果展示"
-    }
-  },
+  "permission": {},
   "networkTimeout": {
     "request": 10000,
     "downloadFile": 10000

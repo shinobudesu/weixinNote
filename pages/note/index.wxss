@@ -3,32 +3,30 @@
 .container {
   position: relative;
   min-height: 100vh;
-  background: #e4f5eb;
+  background: #ffffff;
 }
-
+.loadmore_tips{
+  text-align: center;
+  line-height: 30rpx;
+}
 .searchBox {
   position: sticky;
   top: 0rpx;
   padding: 20rpx;
-  background: #91c3a6;
-  box-shadow: 0 0 5px #91c3a6;
+  background: #a5cbdd;
+  /* box-shadow: 0 0 5px #91c3a6; */
   z-index: 1000;
   height: 80rpx;
   overflow: hidden;
 }
 .searchIcon{
   position: absolute;
-  left: 35rpx;
-  top: 38rpx;
+  right: 45rpx;
+  top: 36rpx;
 }
-.nickName{
-   position: absolute;
-  right: 35rpx;
-  top: 35rpx;
-  color: #fff;
-}
+
 .searchInput {
-  background: #e4f5eb;
+  background: #ffffff;
   height: 80rpx;
   line-height: 80rpx;
   border-radius: 24rpx;
@@ -39,7 +37,6 @@
   position: relative;
   z-index: 100;
   display: flex;
-  background: #e4f5eb;
 }
 .contentAdd{
   position: fixed;
@@ -125,9 +122,13 @@
 
 .noteTime {
   font-size: 24rpx;
+  margin-bottom: 5px;
 }
 .noteAuthor{
+  
   font-size: 20rpx;
+  padding: 5rpx;
+
 }
 .addNote{
   transform: rotate(45deg);

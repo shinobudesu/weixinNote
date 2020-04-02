@@ -1,38 +1,34 @@
 <!--index.wxml-->
 <view class="container">
   <view class="searchBox">
-    <input wx:if='{{bindblurTag}}' auto-focus class="weui-input searchInput" placeholder="搜索便签" bindblur='bindblur' bindfocus='bindfocus'/>
-    <icon wx:if='{{!bindblurTag}}' type="search" class='searchIcon' size="24" color='#fff' bindtap='bindtapIcon'/>
-    <text wx:if='{{!bindblurTag}}' class='nickName'>{{nickName}}</text>
+    <input value='{{searchText}}' class="weui-input searchInput" placeholder="搜索便签" placeholder-style='font-size:14px' bindblur='bindblur' bindfocus='bindfocus'/>
+    <icon  type="search" class='searchIcon' size="24" color='#fff' wx:if="{{!searchText}}"/>
   </view>
   <view class="contentBox">
     <view class="cardBox">
-    <block wx:for="{{imageArray}}" wx:key="{{item.id}}">
-      <view bindlongpress='bindlongpress'  bindtap='bindtapDetail' data-id='{{item.id}}' data-styleId='{{item.style}}' class="{{item.style? 'cardContent '+'style'+item.style : 'cardContent'}}"   wx:if='{{index%2==0}}'>
-        <image class='noteImg' mode="widthFix" lazy-load="true" src="{{item.url}}" wx:if="{{item.type=='图片便签'}}"></image>
-        <view class="{{item.type=='图片便签' ? 'noteContent' : 'noteContentTop noteContent'}}">
+    <block wx:for="{{imageArray}}" wx:key="index">
+      <view bindlongpress='bindlongpress'  bindtap='bindtapDetail' data-id='{{item.id}}' data-styleId='{{item.styleid}}' data-openid='{{item.authorid}}' class="{{item.styleid? 'cardContent '+'style'+item.styleid : 'cardContent'}}"   wx:if='{{index%2==0}}'>
+        <image class='noteImg' mode="widthFix" lazy-load="true" src="{{item.headimg}}" wx:if="{{item.headimg}}"></image>
+        <view class="{{item.headimg? 'noteContent' : 'noteContentTop noteContent'}}">
           <text class='noteTitle'>{{item.title}}</text>
-          <text class='noteTime'>{{item.time}}</text>
-          <text class='noteAuthor'>by.{{item.name}}</text>
+          <text class='noteTime'>{{item.updatedate}}</text>
         </view>
       </view>
     </block>
     </view>
     <view class="cardBox">
-    <block wx:for="{{imageArray}}" wx:key="{{item.id}}">
-      <view bindlongpress='bindlongpress' bindtap='bindtapDetail' data-id='{{item.id}}' data-styleId='{{item.style}}' class="{{item.style? 'cardContent '+'style'+item.style : 'cardContent'}}"   wx:if='{{index%2!=0}}'>
-        <image class='noteImg' mode="widthFix" lazy-load="true" src="{{item.url}}" wx:if="{{item.type=='图片便签'}}"></image>
-        <view class="{{item.type=='图片便签' ? 'noteContent' : 'noteContentTop noteContent'}}">
+    <block wx:for="{{imageArray}}" wx:key="index">
+      <view bindlongpress='bindlongpress' bindtap='bindtapDetail' data-id='{{item.id}}' data-styleId='{{item.styleid}}' data-openid='{{item.authorid}}' class="{{item.styleid? 'cardContent '+'style'+item.styleid : 'cardContent'}}"   wx:if='{{index%2!=0}}'>
+        <image class='noteImg' mode="widthFix" lazy-load="true" src="{{item.headimg}}" wx:if="{{item.headimg}}"></image>
+        <view class="{{item.headimg ? 'noteContent' : 'noteContentTop noteContent'}}">
           <text class='noteTitle'>{{item.title}}</text>
-          <text class='noteTime'>{{item.time}}</text>
-          <text class='noteAuthor'>by.{{item.name}}</text>
+          <text class='noteTime'>{{item.updatedate}}</text>
         </view>
       </view>
     </block>
-      
     </view>
   </view>
   <view class='contentAdd'>
-    <icon type="clear" class='addNote' size="70" color='#efbe2f' bindtap='bindtapAdd'/>
+    <icon type="clear" class='addNote' size="70" color='#a5cbdd' bindtap='bindtapAdd'/>
   </view>
 </view>

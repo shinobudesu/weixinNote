@@ -1,5 +1,4 @@
 const formatTime = date => {
-  console.log(date);
   const year = date.getFullYear()
   const month = date.getMonth() + 1
   const day = date.getDate()
@@ -24,7 +23,18 @@ const formatTime = date => {
       break;
   }
   
-  return `${month}月${day}日 ${r}${hour}:${minute} ${year}`
+  return `${month}月${day}日 ${r}${hour}:${minute}`
+}
+
+const formatTime2 = date => {
+  const year = date.getFullYear()
+  const month = (date.getMonth() + 1)
+  const day = date.getDate()
+  const hour = date.getHours()
+  const minute = date.getMinutes()
+  const second = date.getSeconds()
+  
+  return `${year}-${month}-${day} ${hour}:${minute}:${second}`
 }
 
 const formatNumber = n => {
@@ -33,5 +43,6 @@ const formatNumber = n => {
 }
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formatTime2: formatTime2
 }

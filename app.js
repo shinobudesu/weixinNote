@@ -2,27 +2,30 @@
 App({
   //小程序初始化
   onLaunch: function () {
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-              console.log(res)
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
+    let that = this;
+    wx.login({
+    success(response) {
+      console.log('login success', response);
+      wx.request({
+        url: that.globalData.url +'login',
+        data: {
+          code: response.code
+        },
+        success(result) {
+          console.log('登录成功后返回的信息', result)
+          that.globalData.openid =  result.data.openid;
+        },
+        fail(err) {
+          console.log('失败返回的信息', err);
         }
-      }
-    })
+      })
+    },
+    fail(err) {
+      console.log('login error', err);
+    }
+  })
   },
+
   //小程序启动且前台
   onShow:function(){
 
@@ -31,12 +34,10 @@ App({
   onHide: function () {
 
   },
-  userInfoReadyCallback(res){
-    this.globalData.userInfo = res.userInfo;
-  },
   //全局变量
   globalData: {
-    //用户信息对象&用于标识书签卡片
-    userInfo: null
+    //请求地址
+    openid:'',
+    url:'https://www.shinobu.cn/'
   }
 })

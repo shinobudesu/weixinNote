@@ -4,18 +4,26 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
 		"newFeature": true,
 		"autoAudits": false,
-		"checkInvalidKey": true
+		"uglifyFileName": true,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.10.3",
-	"appid": "wxb150993d5b58d611",
-	"projectname": "Shinobu",
+	"libVersion": "2.5.4",
+	"appid": "wx9c410a0c8dbbd940",
+	"projectname": "每日米签",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
