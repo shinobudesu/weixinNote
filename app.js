@@ -38,6 +38,6 @@ App({
   globalData: {
     //请求地址
     openid:'',
-    url:'https://www.shinobu.cn/'
+    url:''
   }
 })
